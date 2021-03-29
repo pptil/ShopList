@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--METAS-->
+
+    <!--ROBOTS-->
+
+    <!--LINKS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="icon" type="image/jpg" href="https://icons-for-free.com/iconfiles/png/512/buy+citycons+mall+shopping+icon-1320136423977087098.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lista de compras - Reto Semanal 003</title>
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://icons-for-free.com/iconfiles/png/512/buy+citycons+mall+shopping+icon-1320136423977087098.png" alt="" width="30" height="30" class="d-inline-block align-top">
+                Lista de compras
+            </a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div id="vaciotexto">
+                <h3 id="vacio__texto">No hay productos agregados. Click en el icono con el icono <i class="fas fa-plus-circle"></i> para agregar uno nuevo!</h3>
+                <div class="carita"><i class="far fa-sad-tear"></i></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="listado">
+        <div class="alert alert-success" role="alert" id="success">
+            Producto añadido Correctamente!
+        </div>
+        <h1>Listado</h1>
+        <ul class="list-group" id="listScreen">
+        </ul>
+    </section>
+
+    <section id="details">
+        <img src="" alt="" class="pantallaDetalle_icono" id="detalleIcono"> 
+        <h3 id="detalleProducto">Bife</h3>
+        <p id="detalleInfo">Aguante la carne</p>
+        <button type="button" class="btn btn-danger" id="cerrar">Volver</button>
+    </section>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carga" id="botonCarga">
+        <i class="fas fa-plus"></i></i>
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="carga" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nuevo Elemento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="cargaProducto" class="form-label">Producto</label>
+                  <input type="text" class="form-control" id="cargaProducto" placeholder="Ingresa un producto">
+                </div>
+                <div class="mb-3">
+                    <label for="cargaIcono" class="form-label">Icono</label>
+                    <select id="cargaIcono" class="form-select">
+                      <option value="images/meat.png">Carnes</option>
+                      <option value="images/veggie.png">Verduras</option>
+                      <option value="images/fruit.png">Frutas</option>
+                      <option value="images/milk.png">Lacteos</option>
+                      <option value="images/viveres">Viveres</option>
+                      <option value="images/grano.png">Granos</option>
+                      <option value="images/condimento.png">Condimentos y Especias</option>
+                      <option value="images/lata.png">Enlatados</option>
+                      <option value="images/mascota.png">Mascotas</option>
+                      <option value="images/bebidas.png">Bebidas</option>
+                      <option value="images/papel.png">Papeleria</option>
+                      <option value="images/jabon.png">Aseo Personal</option>
+                      <option value="images/limpieza.png">Limpieza</option>
+                      <option value="images/otros.png">Otros</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cargaDesc" class="form-label">Descripcion</label>
+                    <textarea class="form-control" id="cargaDesc" rows="3"></textarea>
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="cargaAdd">Guardar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!--SCRIPTS-->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b9a9860ae5.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
